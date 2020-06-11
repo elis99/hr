@@ -9,5 +9,12 @@ const signup: RouteOptions = {
     schema: SignupSchema
 }
 
+const profile: RouteOptions = {
+    method: 'GET',
+    url: '/api/user/profile',
+    handler: 
+}
+
+
 const routes = [signup];
 export default routes;
