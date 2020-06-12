@@ -1,6 +1,6 @@
 import { UserRepository } from "../repositories/UserRepository"
 
-const getProfile = async () => {
+export const profile = async () => {
     try {
         const repository = new UserRepository();
         const response = repository.profile();

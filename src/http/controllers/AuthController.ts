@@ -5,7 +5,7 @@ import { FastifyRequest, FastifyReply } from 'fastify';
 import { UserRepository } from '../repositories/UserRepository';
 import { UserService } from '../services/UserService';
 
-const signup = async (req: FastifyRequest, reply: FastifyReply<ServerResponse>) => {
+export const signup = async (req: FastifyRequest, reply: FastifyReply<ServerResponse>) => {
 	try {
         const service = new UserService();
         const response = service.signup(req.body);
@@ -17,5 +17,3 @@ const signup = async (req: FastifyRequest, reply: FastifyReply<ServerResponse>) 
 		throw boom.boomify(err);
 	}
 };
-
-export default [signup];
